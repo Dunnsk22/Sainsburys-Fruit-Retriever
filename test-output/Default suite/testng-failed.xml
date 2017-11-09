@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <parameter name="itemTitle" value="Sainsbury&#039;s Apples"/>
+  <parameter name="price" value="1.75"/>
+  <parameter name="calories" value="33"/>
+  <parameter name="itemDescription" value="by Sainsbury&#039;s apples"/>
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.sainsburys.tests.JsonRetrieverTest">
+        <methods>
+          <include name="testJsonResponseContainsTotalField" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.sainsburys.tests.JsonRetrieverTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

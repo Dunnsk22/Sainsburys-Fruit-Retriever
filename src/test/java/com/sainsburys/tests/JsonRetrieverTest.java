@@ -22,12 +22,5 @@ public class JsonRetrieverTest {
 		productsList.add(appleProduct);
 		FreshFruits products = new FreshFruits(productsList);
 		Assert.assertEquals(APPLES_JSON_REPONSE, products.buildJsonResponseForTest());
-	}
-	
-	@Test
-    public void testJsonContainsTotalField() {
-        String json = gscraper.scrape();
-        assertTrue(json.contains("total") && json.contains("results"));
-    }
-	
+	}	
 }

@@ -10,13 +10,20 @@ import org.jsoup.nodes.Element;
  * 
  */
 
+/**
+ * @author joshuadunn
+ *
+ */
+/**
+ * @author joshuadunn
+ *
+ */
 public class DocumentObjectModelController {
 	
 	
 	/**
 	 * @param productElement
-	 * @return
-	 * @throws ProductParseException
+	 * 
 	 */
 	public static String getTitleFromDocument(Document productElement) throws Exception {
 		Element titleElement = productElement.select("h1").get(0);
@@ -26,6 +33,10 @@ public class DocumentObjectModelController {
 			return titleElement.text();
 	}
 
+	/**
+	 * @param productElement
+	 * 
+	 */
 	public static double getItemPriceFromDocument(Document productElement) throws Exception {
 		Element itemPrice = productElement.select(".pricePerUnit").get(0);
 		if (itemPrice == null) {
@@ -35,6 +46,10 @@ public class DocumentObjectModelController {
 			return new Double(priceOfItem);
 	}
 
+	/**
+	 * @param productElement
+	 * 
+	 */
 	public static String getItemCaloriesFromDocument(Document kCalElement) throws Exception {
 		String calories = kCalElement.select(".tableWrapper").select("tr").select(".tableRow0").select("td").text();
 		if (calories == null) {
@@ -43,6 +58,10 @@ public class DocumentObjectModelController {
 		return calories = calories.substring(0,calories.indexOf(" ")+1).replace("kcal", " calories");
 	}
 
+	/**
+	 * @param productElement
+	 * 
+	 */
 	public static String getItemDescriptionFromDocument(Document productElement) throws Exception {
 		Element titleElement = productElement.select(".productText").first();
 		if (titleElement == null) {

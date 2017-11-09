@@ -7,22 +7,12 @@
     <parameter name="calories" value="33"/>
     <parameter name="itemDescription" value="by Sainsbury&#039;s apples"/>
     <classes>
-      <class name="com.sainsburys.tests.JsonBuilderTest">
+      <class name="com.sainsburys.tests.JsonRetrieverTest">
         <methods>
-          <include name="jsonResponseShouldContainCorrectTotal"/>
+          <include name="jsonResponseShouldContainPineappleProductDetails" invocation-numbers="0"/>
+          <include name="testJsonResponseContainsTotalField" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.sainsburys.tests.JsonBuilderTest -->
+      </class> <!-- com.sainsburys.tests.JsonRetrieverTest -->
     </classes>
   </test> <!-- jsonResponseShouldContainAppleProductDetails(failed) -->
-  <test name="priceTotal(failed)">
-    <parameter name="applePrice" value="1.65"/>
-    <parameter name="pineapplePrice" value="1.65"/>
-    <classes>
-      <class name="com.sainsburys.tests.JsonBuilderTest">
-        <methods>
-          <include name="jsonResponseShouldContainAppleProductDetails"/>
-        </methods>
-      </class> <!-- com.sainsburys.tests.JsonBuilderTest -->
-    </classes>
-  </test> <!-- priceTotal(failed) -->
 </suite> <!-- Failed suite [SainsburysWebScraperSuite] -->

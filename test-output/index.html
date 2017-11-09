@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-SainsburysWebScraperSuite">
-              <span class="suite-name border-passed">SainsburysWebScraperSuite</span>
+              <span class="suite-name border-failed">SainsburysWebScraperSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-SainsburysWebScraperSuite" class="hide-methods failed suite-SainsburysWebScraperSuite"> (hide)</a> <!-- hide-methods failed suite-SainsburysWebScraperSuite -->
+                      <a href="#" panel-name="suite-SainsburysWebScraperSuite" class="show-methods failed suite-SainsburysWebScraperSuite"> (show)</a> <!-- show-methods failed suite-SainsburysWebScraperSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-SainsburysWebScraperSuite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-SainsburysWebScraperSuite" title="com.sainsburys.tests.JsonRetrieverTest" hash-for-method="jsonResponseShouldContainPineappleProductDetails(33, 1.75, Sainsbury&#039;s Apples, by Sainsbury&#039;s apples)">jsonResponseShouldContainPineappleProductDetails(33, 1.75, Sainsbury's Apples, by Sainsbury's apples)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-SainsburysWebScraperSuite" title="com.sainsburys.tests.JsonRetrieverTest" hash-for-method="testJsonResponseContainsTotalField(33, 1.75, Sainsbury&#039;s Apples, by Sainsbury&#039;s apples)">testJsonResponseContainsTotalField(33, 1.75, Sainsbury's Apples, by Sainsbury's apples)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-SainsburysWebScraperSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -122,6 +141,38 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-SainsburysWebScraperSuite" class="panel SainsburysWebScraperSuite">
+          <div class="suite-SainsburysWebScraperSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.sainsburys.tests.JsonRetrieverTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="jsonResponseShouldContainPineappleProductDetails(33, 1.75, Sainsbury&#039;s Apples, by Sainsbury&#039;s apples)">
+                  </a> <!-- jsonResponseShouldContainPineappleProductDetails(33, 1.75, Sainsbury's Apples, by Sainsbury's apples) -->
+                  <span class="method-name">jsonResponseShouldContainPineappleProductDetails</span>
+                  <span class="parameters">(33, 1.75, Sainsbury's Apples, by Sainsbury's apples)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [{&quot;results&quot;:[{&quot;item-name&quot;:&quot;Sainsbury&apos;s Apples&quot;,&quot;details&quot;:&quot;by Sainsbury&apos;s apples&quot;,&quot;price&quot;:1.75,&quot;calories&quot;:&quot;33&quot;},{&quot;item-name&quot;:&quot;Sainsbury&apos;s Apples&quot;,&quot;details&quot;:&quot;by Sainsbury&apos;s apples&quot;,&quot;price&quot;:1.75,&quot;calories&quot;:&quot;33&quot;}],&quot;total&quot;:3.5}] but found [{&quot;results&quot;:[{&quot;item-name&quot;:&quot;Sainsbury&apos;s Apples&quot;,&quot;details&quot;:&quot;by Sainsbury&apos;s apples&quot;,&quot;price&quot;:1.75,&quot;calories&quot;:&quot;33&quot;}],&quot;total&quot;:1.75}]
+	at com.sainsburys.tests.JsonRetrieverTest.jsonResponseShouldContainPineappleProductDetails(JsonRetrieverTest.java:33)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testJsonResponseContainsTotalField(33, 1.75, Sainsbury&#039;s Apples, by Sainsbury&#039;s apples)">
+                  </a> <!-- testJsonResponseContainsTotalField(33, 1.75, Sainsbury's Apples, by Sainsbury's apples) -->
+                  <span class="method-name">testJsonResponseContainsTotalField</span>
+                  <span class="parameters">(33, 1.75, Sainsbury's Apples, by Sainsbury's apples)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [{&quot;results&quot;:[{&quot;item-name&quot;:&quot;Sainsbury&apos;s Apples&quot;,&quot;details&quot;:&quot;by Sainsbury&apos;s apples&quot;,&quot;price&quot;:1.75,&quot;calories&quot;:&quot;33&quot;}],&quot;total&quot;:1.75}]
+	at com.sainsburys.tests.JsonRetrieverTest.testJsonResponseContainsTotalField(JsonRetrieverTest.java:42)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SainsburysWebScraperSuite-class-failed -->
           <div class="suite-SainsburysWebScraperSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -220,20 +271,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'jsonResponseShouldContainAppleProductDetails')
 data.setCell(0, 2, 'com.sainsburys.tests.JsonRetrieverTest')
-data.setCell(0, 3, 89);
+data.setCell(0, 3, 106);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'jsonResponseShouldContainCorrectTotal')
-data.setCell(1, 2, 'com.sainsburys.tests.PriceTotalTest')
-data.setCell(1, 3, 2);
+data.setCell(1, 1, 'jsonResponseShouldContainPineappleProductDetails')
+data.setCell(1, 2, 'com.sainsburys.tests.JsonRetrieverTest')
+data.setCell(1, 3, 4);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testJsonResponseContainsTotalField')
+data.setCell(2, 2, 'com.sainsburys.tests.JsonRetrieverTest')
+data.setCell(2, 3, 3);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'jsonResponseShouldContainCorrectTotal')
+data.setCell(3, 2, 'com.sainsburys.tests.PriceTotalTest')
+data.setCell(3, 3, 3);
 window.suiteTableData['SainsburysWebScraperSuite']= { tableData: data, tableDiv: 'times-div-SainsburysWebScraperSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 91 ms</span>
+              <span class="suite-total-time">Total running time: 116 ms</span>
               <div id="times-div-SainsburysWebScraperSuite">
               </div> <!-- times-div-SainsburysWebScraperSuite -->
             </div> <!-- times-div -->
@@ -264,12 +323,24 @@ return data;
                 <span class="method-name">jsonResponseShouldContainAppleProductDetails(33, 1.75, Sainsbury's Apples, by Sainsbury's apples)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">jsonResponseShouldContainPineappleProductDetails(33, 1.75, Sainsbury's Apples, by Sainsbury's apples)</span>
+                <span class="method-start">108 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testJsonResponseContainsTotalField(33, 1.75, Sainsbury's Apples, by Sainsbury's apples)</span>
+                <span class="method-start">118 ms</span>
+              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.sainsburys.tests.PriceTotalTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">jsonResponseShouldContainCorrectTotal(1.65, 1.65)</span>
-                <span class="method-start">122 ms</span>
+                <span class="method-start">173 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

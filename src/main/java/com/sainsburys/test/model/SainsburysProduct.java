@@ -5,8 +5,10 @@ import org.jsoup.nodes.Document;
 import com.sainsburys.test.dom.retrievers.DocumentObjectModelController;
 
 /**
- * @author joshuadunn
- *
+ * @author Joshua Dunn
+ * 
+ * Super class that sits at the top of the Product Hierarchy. All Sainsburys
+ * products havea title, price and description.
  */
 public class SainsburysProduct {
 	
@@ -28,6 +30,7 @@ public class SainsburysProduct {
 	}
 	
 
+	// Constructor Overload/Underload
 	public SainsburysProduct( Document sainsburysDocument ) throws Exception {
 		sainsburysItemTitle = DocumentObjectModelController.getTitleFromDocument(sainsburysDocument);
 		sainsburysItemPrice = DocumentObjectModelController.getItemPriceFromDocument(sainsburysDocument);

@@ -7,12 +7,12 @@ import java.lang.reflect.Type;
 import java.math.BigDecimal;
 
 /**
- * Serializes a FreshFruitProduct
+ * Serializes a FreshFruitProduct to be displayed in the console.
  */
-public class SainsburysProduct implements JsonSerializer<FreshFruit> {
+public class SainsburysProductSerializer implements JsonSerializer<FreshFruit> {
 
     public JsonElement serialize(FreshFruit product, Type type, JsonSerializationContext context) {
-        final JsonObject jsonBuilder = new JsonObject();
+        JsonObject jsonBuilder = new JsonObject();
         jsonBuilder.addProperty("item-name", product.getSainsburysItemTitle());
         jsonBuilder.addProperty("details", product.getSainsburysItemDescription());
         jsonBuilder.addProperty("price", product.getSainsburysItemPrice());

@@ -2,10 +2,8 @@ package com.sainsburys.test.model;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.sainsburys.test.json.builder.SainsburysProduct;
+import com.sainsburys.test.json.builder.SainsburysProductSerializer;
 import com.sainsburys.test.json.builder.SainsburysProductsSerializer;
-
-import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.List;
 
@@ -21,7 +19,7 @@ public class FreshFruits {
         this.products = products;
     }
 
-    public List<FreshFruit> getProducts() {
+    public List<FreshFruit> getFreshFruits() {
         return products;
     }
     
@@ -44,22 +42,26 @@ public class FreshFruits {
 
     /**
      * Builds up json response String which uses Serializers to format
-     * @return builder String
+     * @return builder 
      */
     public String buildJsonResponse() {
         GsonBuilder builder = new GsonBuilder();
         builder.registerTypeAdapter(FreshFruits.class, new SainsburysProductsSerializer());
-        builder.registerTypeAdapter(FreshFruit.class, new SainsburysProduct());
+        builder.registerTypeAdapter(FreshFruit.class, new SainsburysProductSerializer());
         builder.setPrettyPrinting();
         builder.disableHtmlEscaping();
         Gson gson = builder.create();
         return gson.toJson(this);
     }
     
+    /**
+     * Builds up json response message for the tests so its easier to compare Json String
+     * @return builder String
+     */
     public String buildJsonResponseForTest() {
         GsonBuilder builder = new GsonBuilder();
         builder.registerTypeAdapter(FreshFruits.class, new SainsburysProductsSerializer());
-        builder.registerTypeAdapter(FreshFruit.class, new SainsburysProduct());
+        builder.registerTypeAdapter(FreshFruit.class, new SainsburysProductSerializer());
         builder.disableHtmlEscaping();
         Gson gson = builder.create();
         return gson.toJson(this);

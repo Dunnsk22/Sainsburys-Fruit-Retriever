@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>TestNG:  jsonResponseShouldContainAppleProductDetails</title>
+<title>TestNG:  Default test</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
@@ -53,13 +53,13 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>jsonResponseShouldContainAppleProductDetails</h2><table border='1' align="center">
+<h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Nov 09 18:09:35 GMT 2017</td>
+<td>Started on:</td><td>Thu Nov 09 18:03:10 GMT 2017</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (162 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (143 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,18 +75,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.sainsburys.tests.JsonRetrieverTest.jsonResponseShouldContainPineappleProductDetails()'><b>jsonResponseShouldContainPineappleProductDetails</b><br>Test class: com.sainsburys.tests.JsonRetrieverTest<br>Parameters: 33, 1.75, Sainsbury's Apples, by Sainsbury's apples</td>
-<td><div><pre>java.lang.AssertionError: expected [{&quot;results&quot;:[{&quot;item-name&quot;:&quot;Sainsbury&apos;s Apples&quot;,&quot;details&quot;:&quot;by Sainsbury&apos;s apples&quot;,&quot;price&quot;:1.75,&quot;calories&quot;:&quot;33&quot;},{&quot;item-name&quot;:&quot;Sainsbury&apos;s Apples&quot;,&quot;details&quot;:&quot;by Sainsbury&apos;s apples&quot;,&quot;price&quot;:1.75,&quot;calories&quot;:&quot;33&quot;}],&quot;total&quot;:3.5}] but found [{&quot;results&quot;:[{&quot;item-name&quot;:&quot;Sainsbury&apos;s Apples&quot;,&quot;details&quot;:&quot;by Sainsbury&apos;s apples&quot;,&quot;price&quot;:1.75,&quot;calories&quot;:&quot;33&quot;}],&quot;total&quot;:1.75}]
-	at com.sainsburys.tests.JsonRetrieverTest.jsonResponseShouldContainPineappleProductDetails(JsonRetrieverTest.java:33)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace662736689", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace662736689'><pre>java.lang.AssertionError: expected [{&quot;results&quot;:[{&quot;item-name&quot;:&quot;Sainsbury&apos;s Apples&quot;,&quot;details&quot;:&quot;by Sainsbury&apos;s apples&quot;,&quot;price&quot;:1.75,&quot;calories&quot;:&quot;33&quot;},{&quot;item-name&quot;:&quot;Sainsbury&apos;s Apples&quot;,&quot;details&quot;:&quot;by Sainsbury&apos;s apples&quot;,&quot;price&quot;:1.75,&quot;calories&quot;:&quot;33&quot;}],&quot;total&quot;:3.5}] but found [{&quot;results&quot;:[{&quot;item-name&quot;:&quot;Sainsbury&apos;s Apples&quot;,&quot;details&quot;:&quot;by Sainsbury&apos;s apples&quot;,&quot;price&quot;:1.75,&quot;calories&quot;:&quot;33&quot;}],&quot;total&quot;:1.75}]
+<td title='com.sainsburys.tests.JsonRetrieverTest.testJsonResponseContainsTotalField()'><b>testJsonResponseContainsTotalField</b><br>Test class: com.sainsburys.tests.JsonRetrieverTest<br>Parameters: 33, 1.75, Sainsbury's Apples, by Sainsbury's apples</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [{&quot;results&quot;:[{&quot;item-name&quot;:&quot;Sainsbury&apos;s Apples&quot;,&quot;details&quot;:&quot;by Sainsbury&apos;s apples&quot;,&quot;price&quot;:1.75,&quot;calories&quot;:&quot;33&quot;}],&quot;total&quot;:1.75}]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:513)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
 	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at org.testng.Assert.assertEquals(Assert.java:200)
-	at com.sainsburys.tests.JsonRetrieverTest.jsonResponseShouldContainPineappleProductDetails(JsonRetrieverTest.java:33)
+	at org.testng.Assert.assertEquals(Assert.java:179)
+	at com.sainsburys.tests.JsonRetrieverTest.testJsonResponseContainsTotalField(JsonRetrieverTest.java:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -112,21 +108,14 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>com.sainsburys.tests.JsonRetrieverTest@b97c004</td></tr>
-<tr>
-<td title='com.sainsburys.tests.JsonRetrieverTest.testJsonResponseContainsTotalField()'><b>testJsonResponseContainsTotalField</b><br>Test class: com.sainsburys.tests.JsonRetrieverTest<br>Parameters: 33, 1.75, Sainsbury's Apples, by Sainsbury's apples</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [{&quot;results&quot;:[{&quot;item-name&quot;:&quot;Sainsbury&apos;s Apples&quot;,&quot;details&quot;:&quot;by Sainsbury&apos;s apples&quot;,&quot;price&quot;:1.75,&quot;calories&quot;:&quot;33&quot;}],&quot;total&quot;:1.75}]
-	at com.sainsburys.tests.JsonRetrieverTest.testJsonResponseContainsTotalField(JsonRetrieverTest.java:42)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace852687460", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace852687460'><pre>java.lang.AssertionError: expected [true] but found [{&quot;results&quot;:[{&quot;item-name&quot;:&quot;Sainsbury&apos;s Apples&quot;,&quot;details&quot;:&quot;by Sainsbury&apos;s apples&quot;,&quot;price&quot;:1.75,&quot;calories&quot;:&quot;33&quot;}],&quot;total&quot;:1.75}]
+</pre></div><a href='#' onClick='toggleBox("stack-trace1123629720", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1123629720'><pre>java.lang.AssertionError: expected [true] but found [{&quot;results&quot;:[{&quot;item-name&quot;:&quot;Sainsbury&apos;s Apples&quot;,&quot;details&quot;:&quot;by Sainsbury&apos;s apples&quot;,&quot;price&quot;:1.75,&quot;calories&quot;:&quot;33&quot;}],&quot;total&quot;:1.75}]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:513)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
 	at org.testng.Assert.assertEquals(Assert.java:116)
 	at org.testng.Assert.assertEquals(Assert.java:179)
-	at com.sainsburys.tests.JsonRetrieverTest.testJsonResponseContainsTotalField(JsonRetrieverTest.java:42)
+	at com.sainsburys.tests.JsonRetrieverTest.testJsonResponseContainsTotalField(JsonRetrieverTest.java:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
