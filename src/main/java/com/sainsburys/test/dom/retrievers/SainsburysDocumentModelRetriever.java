@@ -15,17 +15,26 @@ import com.sainsburys.test.model.FreshFruits;
 
 public class SainsburysDocumentModelRetriever implements DocumentModelRetriever {
 
-    private String productsUri;
+    private String productsUrl;
     private final String baseUrl = "https://jsainsburyplc.github.io/serverside-test/site/www.sainsburys.co.uk";
 
-    public SainsburysDocumentModelRetriever(String productsUri) {
-        this.productsUri = productsUri;
+    public SainsburysDocumentModelRetriever(String productsUrl) {
+        this.productsUrl = productsUrl;
+    }
+
+    public FreshFruit retrieveProductFromDocument(String product) throws Exception {
+    	try {
+    		Document productDocument = connectToDocumentAndRetrieveHTML(product);
+    		return new FreshFruit(productDocument);
+    	} catch(Exception ex) {
+    		throw new Exception(ex);
+    	}
     }
 
     public FreshFruits retrieveProductsFromDocument() throws Exception {
         List<FreshFruit> products = new ArrayList<FreshFruit>();
         try {
-            Document productsDocument = Jsoup.connect(productsUri).get();
+            Document productsDocument = connectToDocumentAndRetrieveHTML(productsUrl);
             Elements productLinkElements = productsDocument.select(".product h3 a");
 
             for (Element productLinkElement : productLinkElements) {
@@ -40,14 +49,6 @@ public class SainsburysDocumentModelRetriever implements DocumentModelRetriever 
         }
     }
 
-    public FreshFruit retrieveProductFromDocument(String product) throws Exception {
-        try {
-            Document productDocument = connectToDocumentAndRetrieveHTML(product);
-            return new FreshFruit(productDocument);
-        } catch(Exception ex) {
-            throw new Exception(ex);
-        }
-    }
     
     public Document connectToDocumentAndRetrieveHTML( String htmlPageSource ) throws DOMException, IOException {
     	Document sainsburysDocument = Jsoup.connect(htmlPageSource).get();

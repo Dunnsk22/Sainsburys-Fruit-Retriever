@@ -20,7 +20,8 @@ public class JsonRetrieverTest {
 	public void jsonResponseShouldContainAppleProductDetails( String calories, double price, String itemTitle, String itemDescription ) {
 		FreshFruit appleProduct = new FreshFruit(calories, price, itemTitle, itemDescription);
 		productsList.add(appleProduct);
-		FreshFruits products = new FreshFruits(productsList);
-		Assert.assertEquals(APPLES_JSON_REPONSE, products.buildJsonResponseForTest());
+		FreshFruits freshFruits = new FreshFruits(productsList);
+		Assert.assertEquals(APPLES_JSON_REPONSE, freshFruits.buildJsonResponseForTest());
+		System.out.println(freshFruits.buildJsonResponse());
 	}	
 }

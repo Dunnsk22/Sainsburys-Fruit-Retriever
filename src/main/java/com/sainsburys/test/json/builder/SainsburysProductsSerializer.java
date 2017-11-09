@@ -6,7 +6,7 @@ import com.sainsburys.test.model.FreshFruits;
 
 
 /**
- * JSON serializer for a collection of products, including the total unit price
+ * JSON serializer for multiple fruits
  */
 public class SainsburysProductsSerializer implements JsonSerializer<FreshFruits> {
 

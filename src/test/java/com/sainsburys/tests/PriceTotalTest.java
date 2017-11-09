@@ -23,6 +23,8 @@ public class PriceTotalTest {
 		productsList.add(apple);
 		FreshFruits fruits = new FreshFruits(productsList);
 		Assert.assertEquals(3.30, fruits.calculateTotalPriceOfItems());
+		System.out.println("****** Price Total Test ******* \n");
+		System.out.println(fruits.buildJsonResponse());
 
 	}
 	

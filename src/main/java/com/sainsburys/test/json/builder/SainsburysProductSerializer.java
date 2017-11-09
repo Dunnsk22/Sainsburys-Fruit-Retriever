@@ -2,6 +2,7 @@ package com.sainsburys.test.json.builder;
 
 import com.google.gson.*;
 import com.sainsburys.test.model.FreshFruit;
+import com.sainsburys.test.model.FreshFruits;
 
 import java.lang.reflect.Type;
 import java.math.BigDecimal;
@@ -19,5 +20,12 @@ public class SainsburysProductSerializer implements JsonSerializer<FreshFruit> {
         jsonBuilder.addProperty("calories", product.getCalories());
         return jsonBuilder;
     }
+    
+//    public JsonElement serialize(final FreshFruits freshFruits, final Type type, final JsonSerializationContext context) {
+//        final JsonObject jsonObject = new JsonObject();
+//        jsonObject.add("results", context.serialize(freshFruits.getFreshFruits()));
+//        jsonObject.addProperty("total", freshFruits.calculateTotalPriceOfItems());
+//        return jsonObject;
+//    }
 
 }
