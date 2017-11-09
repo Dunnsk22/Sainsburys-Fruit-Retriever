@@ -62,6 +62,10 @@ JSoup was chosen over Selenium as no particular DOM modification was needed i.e 
 
 Two tests are provided in the project which cover the core functionality; Enabling the json is correct and generated; Calculating the price of all items on the page
 
+## Commit History
+
+There isnt that many commits. Please do not let this put you off. Didnt want to over-exagerate the commit's.'
+
 ## Thanks for the opportunity
 
 
