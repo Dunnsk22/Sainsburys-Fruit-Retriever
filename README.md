@@ -1,8 +1,7 @@
 # Sainsburys-Fruit-Retriever
 This project has been created for Sainsbury's Software Engineering Test.
 
-#Project Overview
-================================================
+# Project Overview
 
 This project has been devleoped for Sainsbury's, with the intentions of satisfying their Software Engineering Test. It is Java console application which scrapes a portion of the Sainsbury’s Groceries website.
 
@@ -58,4 +57,11 @@ Gson was used to serialize and produce the json output. Gson is powerful and mak
 TestNG allows tests to be driven via XML. It also allows HTML reports to be built for the testing
 
 JSoup was chosen over Selenium as no particular DOM modification was needed i.e Pressing buttons, writing to textfields etc. It gives you the possibility to select elements using jQuery-like CSS selectors and provides a slick API to traverse the HTML DOM tree
+
+## Tests
+
+Two tests are provided in the project which cover the core functionality; Enabling the json is correct and generated; Calculating the price of all items on the page
+
+## Thanks for the opportunity
+
 
