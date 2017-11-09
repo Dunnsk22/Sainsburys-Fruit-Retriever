@@ -24,4 +24,10 @@ public class JsonRetrieverTest {
 		Assert.assertEquals(APPLES_JSON_REPONSE, products.buildJsonResponseForTest());
 	}
 	
+	@Test
+    public void testJsonContainsTotalField() {
+        String json = gscraper.scrape();
+        assertTrue(json.contains("total") && json.contains("results"));
+    }
+	
 }
