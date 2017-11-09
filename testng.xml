@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SainsburysWebScraperSuite">
+    
+	<test name="jsonResponseShouldContainAppleProductDetails">
+		<parameter name="calories" value="33" />
+		<parameter name="price" value="1.75" />
+		<parameter name="itemTitle" value="Sainsbury's Apples" />
+		<parameter name="itemDescription" value="by Sainsbury's apples" />
+		<classes>
+			<class name="com.sainsburys.tests.JsonRetrieverTest" />
+		</classes>
+	</test>
+	
+	<test name="priceTotal">
+		<parameter name="pineapplePrice" value="1.65" />
+		<parameter name="applePrice" value="1.65" />
+		<classes>
+			<class name="com.sainsburys.tests.PriceTotalTest" />
+		</classes>
+	</test>
+</suite>
+
+
